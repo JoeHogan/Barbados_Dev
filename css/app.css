@@ -1,0 +1,62 @@
+.nav, .pagination, .carousel, .panel-title a {
+	cursor: pointer;
+}
+.app{
+	margin:200px;
+}
+.loading-bar{
+	width:30%;
+}
+.document{
+	position:relative;padding:10px;cursor:pointer;margin-bottom:5px;border-bottom:1px solid black;
+	transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out;
+}
+.document:hover{
+	background:rgba(0,0,0,0.1);
+	transform: scale(1.05); -ms-transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05);
+}
+.document .title{
+	font-size:1.1em; font-weight:bold;
+}
+.document .info{
+	margin-left:30px;padding-top:5px;
+}
+.panel-heading > div{
+	display:inline-block;
+}
+.panel-tools{
+	float:right;
+}
+form.ng-submitted .ng-invalid, form .page-submitted .ng-invalid{
+	border: 1px solid red;
+}
+form .page-submitted input[type=radio].ng-invalid{
+	outline: 1px solid red
+}
+form.ng-submitted.ng-invalid .ng-valid, form .page-submitted .ng-valid{
+	border:1px solid lime;
+}
+.document .actions{
+	position:absolute;bottom:0px;right:0px;margin:10px;visibility:hidden;
+}
+.document:hover .actions{
+	visibility: visible;
+}
+.btn-right{
+	float:right;
+}
+.input-form .related-information{
+	padding:10px 20px;border-bottom:1px solid #ddd;margin-bottom:10px;
+}
+.input-form .related-information .related-link{
+	width:100%;text-align:right;
+}
+.input-form.default .post-error{
+	color:red;font-weight:bold;text-align:center;padding:5px;
+}
+.task-description{
+	padding:5px;margin-bottom:5px;font-weight:bold;border-bottom:1px solid #ddd;
+}
+.modal-footer .btn-warning{
+	float:left;
+}
