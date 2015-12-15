@@ -10,25 +10,28 @@
 	    	<div ng-bind="item.description"></div>
 	  	</div>
 	  	<div class="related-information">
-		  	<div tabset="">
-		    	<div tab="" heading="Submission">
-		    		<div ng-show="form.showSubmission() && form.page == -1">
-		    			<div submission="item.submission" class="tab-content submission"></div>
-		    		    <div class="modal-footer">
-					        <button type="button" class="btn btn-warning" ng-click="form.cancel()">Cancel</button>
-					        <button type="button" class="btn btn-primary" ng-click="form.pageUp()">Continue</button>
-					    </div>
+	  		<div ng-show="form.showSubmission() && form.page == -1">
+			  	<div tabset="">
+			    	<div tab="" heading="Submission">
+			    		
+			    		<div submission="item.submission" class="tab-content submission"></div>
+			    		    
 					</div>
-		    		<div ng-hide="form.showSubmission() && form.page == -1">
-		    			<div ng-include="form.template" onload="form.loaded = true;"></div>
-		    		</div>
-		    	</div>
-		    	<div tab="" heading="History" ng-if="item.tasks.length">
-		    		<div class="tab-content">
-		    			<div history="item.tasks" class="history"></div>
-		    		</div>
-		    	</div>
+			    	
+			    	<div tab="" heading="History" ng-if="item.tasks.length">
+			    		<div class="tab-content">
+			    			<div history="item.tasks" class="history"></div>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="modal-footer">
+			        <button type="button" class="btn btn-warning" ng-click="form.cancel()">Cancel</button>
+			        <button type="button" class="btn btn-primary" ng-click="form.pageUp()">Continue</button>
+			    </div>
 		    </div>
+		    <div ng-hide="form.showSubmission() && form.page == -1">
+    			<div ng-include="form.template" onload="form.loaded = true;"></div>
+    		</div>
 	  	</div>
     </div>
     <div class="post-error">

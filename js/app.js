@@ -64,8 +64,6 @@
 						//any List logic based on the current item would go here...
 						var formsMap = $filter('filter')(data[1].data,{listType: 'formsMap'}, true)[0].list; //get form mappings
 						var form = $filter('filter')(formsMap,{id: scope.item.formId}, true)[0]; //select current form mapping
-						var pre = {}; //create empty object for holding form data
-						if(form.data) pre = scope.item[form.data]; //prefill data
 						scope.form = {
 							page: -1,
 							pageUp: function(validation){
@@ -78,7 +76,9 @@
 								this.page--;
 							},
 							template: 'views/forms/'+form.template,
-							data: pre,
+							data: {
+								commodities: angular.copy(scope.item.submission.commodities) || []
+							},
 							showSubmission: function(){
 								return scope.item.status != 'Draft';
 							},
