@@ -34,8 +34,8 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">Origin</label>
           <div class="col-sm-8">
-            <ui-select ng-model="form.data.origenId" theme="bootstrap">
-              <ui-select-match placeholder="Select the origen...">{{$select.selected.name}}</ui-select-match>
+            <ui-select ng-model="form.data.originId" theme="bootstrap">
+              <ui-select-match placeholder="Select the origin...">{{$select.selected.name}}</ui-select-match>
                 <ui-select-choices repeat="item.id as item in form.options.countries | propsFilter: {name: $select.search}">
                   <div ng-bind="item.name"></div>
                 </ui-select-choices>

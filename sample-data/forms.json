@@ -43,7 +43,7 @@
                 }
             ],
             "companyId": 1,
-            "origenId": "CA",
+            "originId": "CA",
             "countryConsignedId": "US",
             "expectedArrival": "2015-09-21T04:00:00.000Z",
             "supplierId": 2,
@@ -76,7 +76,7 @@
                 }
             ],
             "companyId": 1,
-            "origenId": "CA",
+            "originId": "CA",
             "countryConsignedId": "US",
             "expectedArrival": "2015-09-21T04:00:00.000Z",
             "supplierId": 2,
@@ -121,7 +121,7 @@
                 }
             ],
             "companyId": 1,
-            "origenId": "CA",
+            "originId": "CA",
             "countryConsignedId": "US",
             "expectedArrival": "2015-09-21T04:00:00.000Z",
             "supplierId": 2,
@@ -176,7 +176,7 @@
                 }
             ],
             "companyId": 1,
-            "origenId": "CA",
+            "originId": "CA",
             "countryConsignedId": "US",
             "expectedArrival": "2015-09-21T04:00:00.000Z",
             "supplierId": 2,
@@ -242,7 +242,7 @@
                 }
             ],
             "companyId": 1,
-            "origenId": "CA",
+            "originId": "CA",
             "countryConsignedId": "US",
             "expectedArrival": "2015-09-21T04:00:00.000Z",
             "supplierId": 2,
