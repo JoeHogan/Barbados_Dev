@@ -34,7 +34,12 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">Origin</label>
           <div class="col-sm-8">
-            <select class="form-control" ng-options="country.id as country.name for country in form.options.countries" ng-model="form.data.origen" required></select>
+            <ui-select ng-model="form.data.origenId" theme="bootstrap">
+              <ui-select-match placeholder="Select the origen...">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item.id as item in form.options.countries | propsFilter: {name: $select.search}">
+                  <div ng-bind="item.name"></div>
+                </ui-select-choices>
+            </ui-select>
           </div>
         </div>
         <div class="form-group">
@@ -48,7 +53,12 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">Company</label>
           <div class="col-sm-8">
-            <select ng-options="item.id as item.name for item in form.options.companies" class="form-control" ng-model="form.data.companyId" required></select>
+          	<ui-select ng-model="form.data.companyId" theme="bootstrap">
+              <ui-select-match placeholder="Select the company...">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item.id as item in form.options.companies | propsFilter: {name: $select.search}">
+                  <div ng-bind="item.name"></div>
+                </ui-select-choices>
+            </ui-select>
             <div class="address" ng-if="form.data.companyId" ng-repeat="item in form.options.companies | filter:{id: form.data.companyId}:true | limitTo:'1'">
               <div ng-bind="item.address"></div>
               <div ng-bind="item.countryId"></div>
@@ -58,13 +68,23 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">Consigned</label>
           <div class="col-sm-8">
-            <select class="form-control" ng-options="country.id as country.name for country in form.options.countries" ng-model="form.data.countryConsigned" required></select>
+            <ui-select ng-model="form.data.countryConsignedId" theme="bootstrap">
+              <ui-select-match placeholder="Select the country consigned...">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item.id as item in form.options.countries | propsFilter: {name: $select.search}">
+                  <div ng-bind="item.name"></div>
+                </ui-select-choices>
+            </ui-select>
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-4 control-label">Supplier</label>
           <div class="col-sm-8">
-            <select ng-options="item.id as item.name for item in form.options.suppliers" class="form-control" ng-model="form.data.supplierId" required></select>
+            <ui-select ng-model="form.data.supplierId" theme="bootstrap">
+              <ui-select-match placeholder="Select the supplier...">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="item.id as item in form.options.suppliers | propsFilter: {name: $select.search}">
+                  <div ng-bind="item.name"></div>
+                </ui-select-choices>
+            </ui-select>
             <div class="address" ng-if="form.data.supplierId" ng-repeat="item in form.options.suppliers | filter:{id: form.data.supplierId}:true | limitTo:'1'">
               <div ng-bind="item.address"></div>
               <div ng-bind="item.countryId"></div>
