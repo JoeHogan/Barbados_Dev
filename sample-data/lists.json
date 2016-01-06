@@ -89,6 +89,10 @@
 			{
 				"id": 3,
 				"template": "confirmation-default.html"
+			},
+			{
+				"id": 4,
+				"template": "dcca-license.html"
 			}
 		]
 	},

@@ -80,7 +80,7 @@
 								commodities: angular.copy(scope.item.submission.commodities) || []
 							},
 							showSubmission: function(){
-								return scope.item.status != 'Draft';
+								return scope.item.status == 'Submitted';
 							},
 							options: {
 								countries: $filter('filter')(data[1].data,{listType: 'country'}, true)[0].list,

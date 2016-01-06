@@ -15,9 +15,9 @@
           <tr ng-repeat="item in form.data.commodities">
             <td ng-bind="item.hsCode"></td>
             <td ng-bind="item.description"></td>
-            <td><input type="number" class="form-control" ng-model="item.quantity" required></td>
-            <td><input type="number" class="form-control" ng-model="item.pricePerUnit" required></td>
-            <td><input type="number" class="form-control" ng-model="item.cifValue" required></td>
+            <td ng-bind="item.quantity"></td>
+            <td ng-bind="item.pricePerUnit"></td>
+            <td ng-bind="item.cifValue"></td>
           </tr>
         </tbody>
       </table>

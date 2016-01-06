@@ -14,7 +14,7 @@
   							<td>HS Code</td>
   							<td>Quantity</td>
   							<td>Price Per Unit</td>
-  							<td>C.I.F. Code</td>
+  							<td>CIF Value</td>
   						</tr>
   					</thead>
   					<tbody>
@@ -22,27 +22,27 @@
   							<td ng-bind="c.hsCode"></td>
   							<td ng-bind="c.quantity"></td>
   							<td ng-bind="c.pricePerUnit"></td>
-  							<td ng-bind="c.cifCode"></td>
+  							<td ng-bind="c.cifValue"></td>
   						</tr>
   					</tbody>
   				</table>
   			</td>
   		</tr>
   		<tr>
-  			<td>Importer</td>
-  			<td ng-bind="submission.importerId"></td>
+  			<td>Company</td>
+  			<td ng-bind="submission.companyId"></td>
   		</tr>
   		<tr>
-  			<td>Import Origen</td>
-  			<td ng-bind="submission.importOrigen"></td>
+  			<td>Origen</td>
+  			<td ng-bind="submission.originId"></td>
   		</tr>
   		<tr>
-  			<td>Import Consigned</td>
-  			<td ng-bind="submission.importConsigned"></td>
+  			<td>Consigned</td>
+  			<td ng-bind="submission.countryConsignedId"></td>
   		</tr>
   		<tr>
-  			<td>Expected Arrival</td>
-  			<td ng-bind="submission.importExpectedArrival | date:'mediumDate'"></td>
+  			<td>Expected Arrival Date</td>
+  			<td ng-bind="submission.expectedArrival | date:'mediumDate'"></td>
   		</tr>
   		<tr>
   			<td>Supplier</td>
