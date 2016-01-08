@@ -92,7 +92,7 @@
 			},
 			{
 				"id": 4,
-				"template": "dcca-license.html"
+				"template": "dcca-import-static.html"
 			}
 		]
 	},
